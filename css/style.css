@@ -47,21 +47,27 @@ header nav{
   justify-content: space-between;
 }
 
-header ul{
-  margin-bottom: 15px;
-  width: 100%;
-}
 header ul:last-child{
   margin-bottom: 0;
   overflow: auto;
 }
 
-/* @media all and (max-height: 900px) {
-  header div:first-child{
-    height: 100px;
-    background-color: red;
+@media all and (max-height: 735px) {
+  header ul:last-child{
+    max-height: 40vh;
   }
-} */
+}
+@media all and (max-height: 680px) {
+  header ul:last-child{
+    max-height: 38vh;
+  }
+}
+@media all and (max-height: 630px) {
+    header ul:last-child{
+      max-height: 34vh;
+    }
+}
+
 header li{
   padding: 5px 12px;
   border-left: 2px solid transparent;
