@@ -1,0 +1,83 @@
+/* Proprietà generali */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+
+/* Proprietà Header */
+header{
+  width: 200px;
+  min-height: calc(100vh - 100px);
+  background-color: black;
+  position: fixed;
+  color: white;
+}
+header .profilo{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Proprietà Main */
+main{
+  margin-left: 200px;
+  margin-bottom: 100px;
+  padding-top: 100px;
+}
+  /* Proprietà Upgrade */
+.upgrade{
+  background-color: black;
+  opacity: 0.6;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  left: 200px;
+  width: calc(100% - 200px);
+  height: 100px;
+}
+.upgrade a{
+  font-size: 20px;
+  color: white;
+}
+
+  /* Proprietà barra nav */
+main .navigazione{
+  text-align: center;
+}
+.navigazione li{
+  display: inline-block;
+}
+
+  /* Proprietà brani */
+main section{
+  margin: 10px 20px;
+}
+.flex-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.brano{
+  height: 200px;
+  width: 200px;
+  background-color: yellow;
+  margin: 10px 10px 10px 0;
+}
+/* Proprietà footer */
+footer{
+  background-color: grey;
+  color: white;
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
