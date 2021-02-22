@@ -5,27 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Web</title>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/2e0cc00556.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
   </head>
+
   <body>
     <header>
       <nav>
-        <img src="img/logo.svg" alt="Spotify logo">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Cerca</a></li>
-        </ul>
-      </nav>
+        <div class="">
+          <a id="logo" href="index.html">
+            <img src="img/logo.svg" alt="Spotify logo">
+          </a>
 
-      <nav class="playlist">
-        <h3>Playlist</h3>
-        <a href="#">Crea Playlist</a>
-      </nav>
+          <ul>
+            <li class="active">
+              <a href="#">
+                <img src="img/home.svg" alt="Home icon">Home
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/search.svg" alt="Search icon">Cerca
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/libreria.svg" alt="Library icon">La tua libreria
+              </a>
+            </li>
+          </ul>
 
-      <div class="profilo">
-        Installa
-      </div>
+          <ul class="playlist">
+            <li>
+              <h3>PLAYLIST</h3>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-plus-square"></i> Crea Playlist
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Nome Playlist
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Nome Playlist
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Nome Playlist
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Nome Playlist
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Nome Playlist
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Nome Playlist
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Nome Playlist
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="profilo">
+          <a class="grey-text" href="#">
+            <i class="far fa-arrow-alt-circle-down fa-sm"></i>
+            Installa app
+          </a>
+
+          <div class="separatore"></div>
+
+          <a class="white-text" href="#">
+            <h4>
+              <img src="img/profile.svg" alt="Profile">
+              Jhon Doe
+            </h4>
+          </a>
+        </div>
+      </nav>
     </header>
 
     <main>
