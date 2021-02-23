@@ -24,19 +24,21 @@ a{
 }
 
 /* Proprietà Header */
-header{
-
-}
 header #logo{
-  width: 85%;
+  width: 180px;
   display: inline-block;
   padding: 20px 0 20px 20px;
 }
 header #logo img{
   width: 100%;
 }
+header #logo img:last-child{
+  display: none;
+  width: 40px;
+}
+
 header nav{
-  width: 200px;
+  width: 250px;
   background-color: black;
   color: white;
   height: calc(100vh - 100px);
@@ -69,18 +71,23 @@ header ul:last-child{
 }
 
 header li{
-  padding: 5px 12px;
+  padding: 5px 20px;
   border-left: 2px solid transparent;
 }
-header li a{
-  color: grey;
+header li a, .profilo a{
+  color: white;
   font-weight: 600;
+  opacity: 0.6;
 }
 header li.active{
   border-left: 2px solid #adff2f;
 }
 header li.active a{
   color: white;
+  opacity: 0.9;
+}
+header li.active a:hover, header li a:hover, .profilo a:hover{
+  opacity: 1;
 }
 header li img{
   height: 30px;
@@ -95,7 +102,7 @@ header li i{
 }
 
 header .profilo{
-  margin: 5px 12px 10px;
+  margin: 5px 20px 10px;
 
 }
 .profilo i{
@@ -104,7 +111,7 @@ header .profilo{
 
 .separatore{
   border-top: 1px solid grey;
-  margin: 7px 0;
+  margin: 8px 0 14px;
 }
 
 .profilo img{
@@ -114,41 +121,120 @@ header .profilo{
   vertical-align: middle;
 }
 
+@media all and (max-width: 767px){
+  header nav{
+    width: 80px;
+  }
+  header #logo{
+    width: 100%;
+    padding-left: 17px;
+  }
+  header #logo img:first-child{
+    display: none;
+  }
+  header #logo img:last-child{
+    display: inline-block;
+  }
+  .disappear{
+    display: none;
+  }
+  header li.active{
+    border-left: 2px solid transparent;
+  }
+  header .playlist{
+    display: none;
+  }
+  .separatore{
+    visibility: hidden;
+  }
+  header nav{
+    align-items: center;
+  }
+  header .profilo{
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+  .profilo i{
+    margin-right: 0;
+  }
+}
 
 /* Proprietà Main */
-main{
-  margin-left: 200px;
-  margin-bottom: 100px;
-  padding-top: 100px;
-  background-color: #141922;
-}
   /* Proprietà Upgrade */
 .upgrade{
-  background-color: black;
-  opacity: 0.6;
+  background-color: rgba(0, 0, 0, 0.5);
   text-align: right;
   position: fixed;
   top: 0;
-  left: 200px;
-  width: calc(100% - 200px);
-  height: 100px;
+  left: 250px;
+  width: calc(100% - 250px);
+  min-height: 100px;
+  overflow: hidden;
+  z-index: 200;
 }
 .upgrade a{
+  text-align: center;
   font-size: 20px;
   color: white;
+  min-height: 50px;
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 7px 30px;
+  margin: 25px 15px;
 }
 
   /* Proprietà barra nav */
+main{
+  margin-left: 250px;
+  margin-bottom: 100px;
+  padding-top: 100px;
+  background-color: #141922;
+  min-height: calc(100vh - 100px);
+}
+@media all and (max-width: 767px){
+  main{
+    margin-left: 80px;
+    width: calc(100% - 80px);
+  }
+  .upgrade{
+    width: calc(100% - 80px);
+    left: 80px;
+  }
+}
+
 main .navigazione{
   text-align: center;
+  margin: 25px 0 20px;
+  font-weight: 600;
 }
 .navigazione li{
   display: inline-block;
+  margin: 0 15px;
+}
+.navigazione li a{
+  color: white;
+  opacity: 0.5;
+}
+.navigazione li a:hover{
+  opacity: 1;
+}
+.sep-orizzontale{
+  border-top: 2px solid #adff2f;
+  border-radius: 1px;
+  margin: 0 auto;
+  width: 40%;
+  display: none;
+}
+.active .sep-orizzontale{
+  display: block;
 }
 
   /* Proprietà brani */
 main section{
   margin: 10px 20px;
+  color: white;
 }
 
 .flex-list{
@@ -156,14 +242,53 @@ main section{
   flex-wrap: wrap;
 }
 .brano{
-  height: 200px;
-  width: 200px;
-  background-color: yellow;
-  margin: 10px 10px 10px 0;
+  min-height: 200px;
+  max-width: calc((100% / 6) - 20px);
+  margin: 20px 20px 20px 0;
+  text-align: center;
+  position: relative;
 }
-.flex-list.artista .brano{
+@media all and (min-width: 992px) and (max-width: 1199px) {
+  .brano{
+    max-width: calc((100% / 4) - 20px);
+  }
+}
+@media all and (max-width: 991px){
+  .brano{
+    max-width: calc((100% / 2) - 20px);
+  }
+}
+
+.brano img{
+  max-width: 100%;
+  transition: opacity 0.3s;
+}
+.brano .play:hover img{
+  opacity: 0.5;
+}
+.brano .play{
+  position: relative;
+}
+.brano .play i{
+  font-size: 60px;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.brano .play:hover i{
+  visibility: visible;
+  opacity: 1;
+}
+.flex-list.artista .play img{
   border-radius: 50%;
 }
+
 
 /* Proprietà footer */
 footer{

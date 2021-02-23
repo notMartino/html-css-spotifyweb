@@ -20,22 +20,23 @@
         <div class="">
           <a id="logo" href="index.html">
             <img src="img/logo.svg" alt="Spotify logo">
+            <img src="img/logo-small.svg" alt="Spotify logo mini">
           </a>
 
           <ul>
             <li class="active">
               <a href="#">
-                <img src="img/home.svg" alt="Home icon">Home
+                <img src="img/home.svg" alt="Home icon"><span class="disappear">Home</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="img/search.svg" alt="Search icon">Cerca
+                <img src="img/search.svg" alt="Search icon"><span class="disappear">Cerca</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="img/libreria.svg" alt="Library icon">La tua libreria
+                <img src="img/libreria.svg" alt="Library icon"><span class="disappear">La tua libreria</span>
               </a>
             </li>
           </ul>
@@ -88,9 +89,9 @@
         </div>
 
         <div class="profilo">
-          <a class="grey-text" href="#">
+          <a class="" href="#">
             <i class="far fa-arrow-alt-circle-down fa-sm"></i>
-            Installa app
+            <span class="disappear">Installa app</span>
           </a>
 
           <div class="separatore"></div>
@@ -98,7 +99,7 @@
           <a class="white-text" href="#">
             <h4>
               <img src="img/profile.svg" alt="Profile">
-              Jhon Doe
+              <span class="disappear">Martino Scalvini</span>
             </h4>
           </a>
         </div>
@@ -107,12 +108,15 @@
 
     <main>
       <div class="upgrade">
-        <a href="#">Effettua l'upgrade</a>
+        <a href="#">EFFETTUA L'UPGRADE</a>
       </div>
 
       <nav class="navigazione">
         <ul>
-          <li><a href="#">IN EVIDENZA</a></li>
+          <li class="active">
+            <a href="#">IN EVIDENZA</a>
+            <div class="sep-orizzontale"></div>
+          </li>
           <li><a href="#">PODCAST</a></li>
           <li><a href="#">CLASSIFICHE</a></li>
           <li><a href="#">GENERI E MOOD</a></li>
@@ -126,56 +130,124 @@
         <h2>Recently played</h2>
         <ul class="flex-list">
           <li class="brano">
-
+            <a href="#">
+              <div class="play">
+                <i class="far fa-play-circle"></i>
+                <img src="img/metal_lifting.jpg" alt="Metal">
+              </div>
+              <h3 class="white-text">Heavy Metal</h3>
+              <h5 class="grey-text">Subtitle</h5>
+            </a>
           </li>
-          <li class="brano">
 
+          <li class="brano">
+            <a href="#">
+              <div class="play">
+                <i class="far fa-play-circle"></i>
+                <img src="img/stranger.jpeg" alt="Stranger">
+              </div>
+              <h3 class="white-text">Stranger Things Vol.1 (a Netflix Original Soundtrack)</h3>
+              <h5 class="grey-text">Kyle Dixon &amp; Micheal Stein</h5>
+            </a>
           </li>
-          <li class="brano">
 
+          <li class="brano">
+            <a href="#">
+              <div class="play">
+                <i class="far fa-play-circle"></i>
+                <img src="img/aquietplace.jpeg" alt="Quiet">
+              </div>
+              <h3 class="white-text">A quiet place</h3>
+              <h5 class="grey-text">Subtitle</h5>
+            </a>
           </li>
-          <li class="brano">
 
+          <li class="brano">
+            <a href="#">
+              <div class="play">
+                <i class="far fa-play-circle"></i>
+                <img src="img/split.jpeg" alt="Split">
+              </div>
+              <h3 class="white-text">Split</h3>
+              <h5 class="grey-text">Subtitle</h5>
+            </a>
           </li>
-          <li class="brano">
 
+          <li class="brano">
+            <a href="#">
+              <div class="play">
+                <i class="far fa-play-circle"></i>
+                <img src="img/cure.jpeg" alt="Cure">
+              </div>
+              <h3 class="white-text">Cure</h3>
+              <h5 class="grey-text">Subtitle</h5>
+            </a>
           </li>
-          <li class="brano">
 
+          <li class="brano">
+            <a href="#">
+              <div class="play">
+                <i class="far fa-play-circle"></i>
+                <img src="img/sinister.jpeg" alt="Sinister">
+              </div>
+              <h3 class="white-text">Cure</h3>
+              <h5 class="grey-text">Subtitle</h5>
+            </a>
           </li>
         </ul>
       </section>
 
       <!-- Sezione brani per te -->
-      <section>
+      <section class="white-text">
         <h2>Creato per Martino</h2>
+        <p class="grey-text">
+          Più ascolti, più accurati saranno i suggermineti
+        </p>
         <ul class="flex-list">
           <li class="brano">
-
+            <a href="#">
+              <div class="play">
+                <i class="far fa-play-circle"></i>
+                <img src="img/radar.jpeg" alt="Radar">
+              </div>
+              <h3 class="white-text">Release Radar</h3>
+            </a>
           </li>
-          <li class="brano">
 
+          <li class="brano">
+            <a href="#">
+              <div class="play">
+                <i class="far fa-play-circle"></i>
+                <img src="img/mixdaily.jpeg" alt="Daily mix">
+              </div>
+              <h3 class="white-text">Daily Mix 1</h3>
+            </a>
           </li>
-          <li class="brano">
-
-          </li>
-          <li class="brano">
-
         </ul>
       </section>
 
       <!-- Sezione artisti popolari -->
-      <section>
+      <section class="white-text">
         <h2>Artisti popolari</h2>
         <ul class="flex-list artista">
           <li class="brano">
-
+            <a href="#">
+              <div class="play">
+                <i class="far fa-play-circle"></i>
+                <img src="img/youg.jpeg" alt="Young">
+              </div>
+              <h3 class="white-text">Daily Mix 1</h3>
+            </a>
           </li>
-          <li class="brano">
 
-          </li>
           <li class="brano">
-
+            <a href="#">
+              <div class="play">
+                <i class="far fa-play-circle"></i>
+                <img src="img/einaudi.jpeg" alt="Einaudi">
+              </div>
+              <h3 class="white-text">Daily Mix 1</h3>
+            </a>
           </li>
         </ul>
       </section>
