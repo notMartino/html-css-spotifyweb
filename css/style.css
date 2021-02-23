@@ -183,6 +183,10 @@ header .profilo{
   border-radius: 25px;
   padding: 7px 30px;
   margin: 25px 15px;
+  transition: transform 0.2s;
+}
+.upgrade a:hover{
+  transform: scale(1.05);
 }
 
   /* Proprietà barra nav */
@@ -192,6 +196,7 @@ main{
   padding-top: 100px;
   background-color: #141922;
   min-height: calc(100vh - 100px);
+  overflow: hidden;
 }
 @media all and (max-width: 767px){
   main{
@@ -292,13 +297,70 @@ main section{
 
 /* Proprietà footer */
 footer{
-  background-color: grey;
+  background-color: #282828;
   color: white;
   height: 100px;
+  padding: 0 20px;
   position: fixed;
+  z-index: 900;
   bottom: 0;
   left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
+
+/* Colonna SX footer */
+.data{
+  max-height: 60px;
+  display: flex;
+  align-items: center;
+}
+.data img{
+  width: 60px;
+}
+
+  /* Lista brano */
+.data .titoli{
+  display: inline-block;
+  margin: 0 15px 0 10px;
+  min-width: 50px;
+}
+.titoli li{
+  height: 18px;
+  line-height: 18px;
+}
+.data li:hover{
+  text-decoration: underline;
+}
+
+  /* Lista icone sx */
+.data .folder{
+  display: inline-block;
+  margin: 0;
+}
+.folder li{
+  display: inline-block;
+  margin: 0 10px 5px 0;
+}
+.folder li a:hover{
+  color: white;
+}
+
+  /* Comportamento XS */
+@media all and (max-width: 767px) {
+  .folder li{
+    display: block;
+    margin-bottom: 5px;
+    margin-right: 0;
+  }
+  .folder li:last-child{
+    margin-bottom: 0;
+  }
+  .titoli li{
+    height: auto;
+  }
+}
+
+/* Colonna CENTR footer */
