@@ -364,3 +364,106 @@ footer{
 }
 
 /* Colonna CENTR footer */
+.music-player{
+  text-align: center;
+  width: 30%;
+  height: 100%;
+  min-width: 230px;
+  margin: 0 50px;
+}
+
+.music-player li{
+  display: inline-block;
+  margin: 10px 10px;
+  font-size: 20px;
+  vertical-align: middle;
+  transition: transform 0.2s;
+}
+.music-player li a{
+  color: white;
+}
+.music-player li:hover {
+  transform: scale(1.2);
+}
+
+.music-player #play{
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+/* Barra minuti */
+.loading-bar{
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  height: 5px;
+  border-radius: 2.5px;
+  background-color: grey;
+  position: relative;
+  vertical-align: middle;
+}
+.minute-bar{
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #cecece;
+  border-radius: 2.5px;
+  transition: background-color 0.2s;
+}
+
+.minute-bar:hover{
+  background-color: #adff2f;
+  cursor: pointer;
+}
+.minute-bar i{
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  transform: translate(0, -50%);
+  transition: opacity 0.2s;
+}
+.minute-bar:hover i{
+  visibility: visible;
+  opacity: 1;
+}
+.loading-bar .left-numb, .loading-bar .right-numb{
+  position: absolute;
+}
+.loading-bar .left-numb{
+  left: -40px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.loading-bar .right-numb{
+  right: -43px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+/* Colonna DX footer */
+footer .options{
+  width: 20%;
+  text-align: right;
+  min-width: 160px;
+}
+footer .options .loading-bar{
+  display: inline-block;
+  width: 40%;
+  max-width: 300px;
+}
+footer .options i:not(.fa-circle){
+  vertical-align: middle;
+  margin-right: 10px;
+  transition: transform 0.2s;
+  color: white;
+}
+footer .options i.fa-volume-up{
+  margin-right: 5px;
+}
+footer .options i:hover:not(.fa-circle){
+  transform: scale(1.2);
+}
