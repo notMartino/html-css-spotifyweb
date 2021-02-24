@@ -266,7 +266,7 @@ main section{
 
 .brano{
   min-height: 200px;
-  max-width: calc((100% / 6) - 20px);
+  flex-basis: calc((100% / 6) - 20px);
   margin: 20px 20px 20px 0;
   text-align: center;
   position: relative;
@@ -275,13 +275,13 @@ main section{
   /* MD - 4pz */
 @media all and (min-width: 992px) and (max-width: 1199px) {
   .brano{
-    max-width: calc((100% / 4) - 20px);
+    flex-basis: calc((100% / 4) - 20px);
   }
 }
   /* SM/XS - 2pz */
 @media all and (max-width: 991px){
   .brano{
-    max-width: calc((100% / 2) - 20px);
+    flex-basis: calc((100% / 2) - 20px);
   }
 }
 
@@ -339,7 +339,7 @@ footer{
   max-height: 60px;
   display: flex;
   align-items: center;
-  width: 30%;
+  flex-basis: 30%;
   min-width: 180px;
 }
 .data img{
@@ -377,7 +377,7 @@ footer{
 /* Colonna CENTR footer */
 .music-player{
   text-align: center;
-  width: 40%;
+  flex-basis: 40%;
   min-width: 180px;
   padding: 0 8px;
 }
@@ -445,7 +445,7 @@ footer{
 
 /* Colonna DX footer */
 footer .options{
-  width: 30%;
+  flex-basis: 30%;
   text-align: right;
   min-width: 110px;
 }
