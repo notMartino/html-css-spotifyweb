@@ -1,0 +1,32 @@
+/* BONUS */
+/* Cover brani che non vanno a capo ma spariscono */
+.flex-list{
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+@media (min-width: 992px) and (max-width: 1199px){
+  .brano {
+      min-width: calc((100% / 4) - 20px);
+  }
+}
+@media (max-width: 991px){
+  .brano {
+      min-width: calc((100% / 2) - 20px);
+  }
+}
+
+/* Upgrade che scompare a Ypx di altezza con effetto */
+.upgrade {
+  transition: opacity 0.5s linear;
+}
+main{
+  transition: padding-top 1s;
+}
+@media all and (max-height: 550px){
+  .upgrade{
+    opacity: 0;
+  }
+  main{
+    padding-top: 0;
+  }
+}
