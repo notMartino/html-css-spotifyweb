@@ -24,6 +24,17 @@ a{
 }
 
 /* Proprietà Header */
+header nav{
+  width: 250px;
+  background-color: black;
+  color: white;
+  height: calc(100vh - 100px);
+  position: fixed;
+  z-index: 300;
+  display: flex;
+  flex-direction: column;
+}
+  /* Logo Spotify */
 header #logo{
   width: 180px;
   display: inline-block;
@@ -36,40 +47,12 @@ header #logo img:last-child{
   display: none;
   width: 40px;
 }
-
-header nav{
-  width: 250px;
-  background-color: black;
-  color: white;
-  height: calc(100vh - 100px);
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  /* flex-wrap: wrap; */
-  justify-content: space-between;
+  /* Parte superiore nav */
+header .nav-top{
+  flex-grow: 1;
 }
 
-header ul:last-child{
-  margin-bottom: 0;
-  overflow: auto;
-}
-
-@media all and (max-height: 735px) {
-  header ul:last-child{
-    max-height: 40vh;
-  }
-}
-@media all and (max-height: 680px) {
-  header ul:last-child{
-    max-height: 38vh;
-  }
-}
-@media all and (max-height: 630px) {
-    header ul:last-child{
-      max-height: 34vh;
-    }
-}
-
+  /* Lista nav */
 header li{
   padding: 5px 20px;
   border-left: 2px solid transparent;
@@ -79,6 +62,7 @@ header li a, .profilo a{
   font-weight: 600;
   opacity: 0.6;
 }
+  /* Link e link nav con banda verde */
 header li.active{
   border-left: 2px solid #adff2f;
 }
@@ -101,14 +85,53 @@ header li i{
   vertical-align: middle;
 }
 
+  /* Lista playlist */
+header .playlist{
+  margin-bottom: 0;
+}
+.play-name{
+  overflow: auto;
+}
+  /* Sottolista nomi playlist */
+.play-name li{
+  padding: 5px 0;
+}
+  /* Sottolista che cambia altezza, con scroll */
+@media all and (max-height: 750px) {
+  header .play-name{
+    max-height: 31vh;
+  }
+}
+@media all and (max-height: 730px) {
+  header .play-name{
+    max-height: 28vh;
+  }
+}
+@media all and (max-height: 700px) {
+    header .play-name{
+      max-height: 25vh;
+    }
+}
+@media all and (max-height: 680px) {
+    header .play-name{
+      max-height: 22vh;
+    }
+}
+@media all and (max-height: 650px) {
+    header .play-name{
+      max-height: 19vh;
+    }
+}
+
+  /* parte inferiore nav (account e download) */
 header .profilo{
   margin: 5px 20px 10px;
-
 }
 .profilo i{
   margin-right: 7px;
 }
 
+  /* Separatore orizzontale */
 .separatore{
   border-top: 1px solid grey;
   margin: 8px 0 14px;
@@ -121,34 +144,27 @@ header .profilo{
   vertical-align: middle;
 }
 
+  /* Navbar SX che cambia a Ypx */
 @media all and (max-width: 767px){
   header nav{
     width: 80px;
+    align-items: center;
   }
   header #logo{
     width: 100%;
     padding-left: 17px;
   }
-  header #logo img:first-child{
-    display: none;
-  }
   header #logo img:last-child{
     display: inline-block;
   }
-  .disappear{
+  .disappear, header #logo img:first-child, .playlist{
     display: none;
   }
   header li.active{
     border-left: 2px solid transparent;
   }
-  header .playlist{
-    display: none;
-  }
   .separatore{
     visibility: hidden;
-  }
-  header nav{
-    align-items: center;
   }
   header .profilo{
     margin-left: 0;
@@ -161,6 +177,13 @@ header .profilo{
 }
 
 /* Proprietà Main */
+main{
+  padding: 100px 0 100px 250px;
+  background-color: #141922;
+  min-height: calc(100vh - 100px);
+  overflow: hidden;
+}
+
   /* Proprietà Upgrade */
 .upgrade{
   background-color: rgba(0, 0, 0, 0.5);
@@ -189,19 +212,10 @@ header .profilo{
   transform: scale(1.05);
 }
 
-  /* Proprietà barra nav */
-main{
-  margin-left: 250px;
-  margin-bottom: 100px;
-  padding-top: 100px;
-  background-color: #141922;
-  min-height: calc(100vh - 100px);
-  overflow: hidden;
-}
+/* Main e upgrade che cambiano a Ypx */
 @media all and (max-width: 767px){
   main{
-    margin-left: 80px;
-    width: calc(100% - 80px);
+    padding-left: 80px;
   }
   .upgrade{
     width: calc(100% - 80px);
@@ -209,6 +223,7 @@ main{
   }
 }
 
+/* Proprietà barra nav main */
 main .navigazione{
   text-align: center;
   margin: 25px 0 20px;
@@ -216,7 +231,7 @@ main .navigazione{
 }
 .navigazione li{
   display: inline-block;
-  margin: 0 15px;
+  margin: 0 15px 5px;
 }
 .navigazione li a{
   color: white;
@@ -225,6 +240,7 @@ main .navigazione{
 .navigazione li a:hover{
   opacity: 1;
 }
+  /* Linea verde inferiore su link attivo */
 .sep-orizzontale{
   border-top: 2px solid #adff2f;
   border-radius: 1px;
@@ -241,11 +257,13 @@ main section{
   margin: 10px 20px;
   color: white;
 }
-
+  /* Lista brani flex*/
 .flex-list{
   display: flex;
   flex-wrap: wrap;
+  margin-right: -20px;
 }
+
 .brano{
   min-height: 200px;
   max-width: calc((100% / 6) - 20px);
@@ -253,11 +271,14 @@ main section{
   text-align: center;
   position: relative;
 }
+  /* Brani che vanno a capo diversamente a Ypx */
+  /* MD - 4pz */
 @media all and (min-width: 992px) and (max-width: 1199px) {
   .brano{
     max-width: calc((100% / 4) - 20px);
   }
 }
+  /* SM/XS - 2pz */
 @media all and (max-width: 991px){
   .brano{
     max-width: calc((100% / 2) - 20px);
@@ -268,11 +289,13 @@ main section{
   max-width: 100%;
   transition: opacity 0.3s;
 }
-.brano .play:hover img{
-  opacity: 0.5;
-}
+
+/* Overlay con icona su immagine brano */
 .brano .play{
   position: relative;
+}
+.brano .play:hover img{
+  opacity: 0.5;
 }
 .brano .play i{
   font-size: 60px;
@@ -290,10 +313,10 @@ main section{
   visibility: visible;
   opacity: 1;
 }
-.flex-list.artista .play img{
+/* img artista tonda */
+.flex-list.artista img{
   border-radius: 50%;
 }
-
 
 /* Proprietà footer */
 footer{
@@ -316,6 +339,8 @@ footer{
   max-height: 60px;
   display: flex;
   align-items: center;
+  width: 30%;
+  min-width: 180px;
 }
 .data img{
   width: 60px;
@@ -324,57 +349,42 @@ footer{
   /* Lista brano */
 .data .titoli{
   display: inline-block;
-  margin: 0 15px 0 10px;
+  margin: 0 10px 0 10px;
   min-width: 50px;
 }
 .titoli li{
-  height: 18px;
+  height: auto;
   line-height: 18px;
 }
 .data li:hover{
   text-decoration: underline;
 }
 
-  /* Lista icone sx */
+  /* Lista icone parte sx */
 .data .folder{
   display: inline-block;
-  margin: 0;
+  margin: 0 2px;
 }
 .folder li{
   display: inline-block;
-  margin: 0 10px 5px 0;
+  margin: 0 5px 5px 0;
+  width: 25px;
 }
 .folder li a:hover{
   color: white;
 }
 
-  /* Comportamento XS */
-@media all and (max-width: 767px) {
-  .folder li{
-    display: block;
-    margin-bottom: 5px;
-    margin-right: 0;
-  }
-  .folder li:last-child{
-    margin-bottom: 0;
-  }
-  .titoli li{
-    height: auto;
-  }
-}
-
 /* Colonna CENTR footer */
 .music-player{
   text-align: center;
-  width: 30%;
-  height: 100%;
-  min-width: 230px;
-  margin: 0 50px;
+  width: 40%;
+  min-width: 180px;
+  padding: 0 8px;
 }
-
+/* Lista comandi musica */
 .music-player li{
   display: inline-block;
-  margin: 10px 10px;
+  margin: 0 4px;
   font-size: 20px;
   vertical-align: middle;
   transition: transform 0.2s;
@@ -385,25 +395,28 @@ footer{
 .music-player li:hover {
   transform: scale(1.2);
 }
-
+  /* Bottone play */
 .music-player #play{
   font-size: 30px;
   vertical-align: middle;
 }
 
-/* Barra minuti */
+/* Barra minutaggio */
 .loading-bar{
-  width: 90%;
+  width: 70%;
   max-width: 600px;
-  margin: auto;
+  margin: 0 10px;
   height: 5px;
   border-radius: 2.5px;
   background-color: grey;
   position: relative;
   vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
 }
+/* Barra minuti effettivi */
 .minute-bar{
-  width: 40%;
+  width: 35%;
   height: 100%;
   position: absolute;
   top: 0;
@@ -412,11 +425,10 @@ footer{
   border-radius: 2.5px;
   transition: background-color 0.2s;
 }
-
-.minute-bar:hover{
+.loading-bar:hover .minute-bar{
   background-color: #adff2f;
-  cursor: pointer;
 }
+/* Icona barra minuti effettivi */
 .minute-bar i{
   visibility: hidden;
   opacity: 0;
@@ -426,44 +438,65 @@ footer{
   transform: translate(0, -50%);
   transition: opacity 0.2s;
 }
-.minute-bar:hover i{
+.loading-bar:hover .minute-bar i{
   visibility: visible;
   opacity: 1;
-}
-.loading-bar .left-numb, .loading-bar .right-numb{
-  position: absolute;
-}
-.loading-bar .left-numb{
-  left: -40px;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-.loading-bar .right-numb{
-  right: -43px;
-  top: 50%;
-  transform: translate(0, -50%);
 }
 
 /* Colonna DX footer */
 footer .options{
-  width: 20%;
+  width: 30%;
   text-align: right;
-  min-width: 160px;
+  min-width: 110px;
 }
+/* Barra colonna DX */
 footer .options .loading-bar{
-  display: inline-block;
-  width: 40%;
+  width: 20%;
   max-width: 300px;
+  margin: 0 2px;
 }
+/* Icone colonna DX */
 footer .options i:not(.fa-circle){
   vertical-align: middle;
   margin-right: 10px;
   transition: transform 0.2s;
   color: white;
 }
+/* Icone volume */
 footer .options i.fa-volume-up{
   margin-right: 5px;
 }
 footer .options i:hover:not(.fa-circle){
   transform: scale(1.2);
+}
+
+/* Proprietà footer che cambiano a Ypx */
+@media all and (max-width: 767px) {
+  .folder li{
+    display: block;
+    margin-bottom: 5px;
+    margin-right: 0;
+  }
+  .folder li:last-child{
+    margin-bottom: 0;
+  }
+  .data{
+    min-width: 150px;
+    font-size: 0.8em;
+  }
+  .data img{
+    width: 45px;
+  }
+  .music-player .loading-bar{
+    width: 50%;
+  }
+  footer i, .music-player{
+    font-size: 0.8em;
+  }
+  footer .options .loading-bar{
+    width: 30%;
+  }
+  footer .options i:not(.fa-circle){
+    margin-right: 5px;
+  }
 }

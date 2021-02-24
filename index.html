@@ -17,7 +17,7 @@
   <body>
     <header>
       <nav>
-        <div class="">
+        <div class="nav-top">
           <a id="logo" href="index.html">
             <img src="img/logo.svg" alt="Spotify logo">
             <img src="img/logo-small.svg" alt="Spotify logo mini">
@@ -51,39 +51,43 @@
               </a>
             </li>
             <li>
-              <a href="#">
-                Nome Playlist
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Nome Playlist
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Nome Playlist
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Nome Playlist
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Nome Playlist
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Nome Playlist
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Nome Playlist
-              </a>
+              <ul class="play-name">
+                <li>
+                  <a href="#">
+                    Linkin Park
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    EDM - House
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Trap Caviar
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    2Scratch
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Workout
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    This is Sfera
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Top Remixes
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -117,9 +121,18 @@
             <a href="#">IN EVIDENZA</a>
             <div class="sep-orizzontale"></div>
           </li>
-          <li><a href="#">PODCAST</a></li>
-          <li><a href="#">CLASSIFICHE</a></li>
-          <li><a href="#">GENERI E MOOD</a></li>
+          <li>
+            <a href="#">PODCAST</a>
+            <div class="sep-orizzontale"></div>
+          </li>
+          <li>
+            <a href="#">CLASSIFICHE</a>
+            <div class="sep-orizzontale"></div>
+          </li>
+          <li>
+            <a href="#">GENERI E MOOD</a>
+            <div class="sep-orizzontale"></div>
+          </li>
           <li><a href="#">NUOVE USCITE</a></li>
           <li><a href="#">SCOPRI</a></li>
         </ul>
@@ -236,7 +249,7 @@
                 <i class="far fa-play-circle"></i>
                 <img src="img/youg.jpeg" alt="Young">
               </div>
-              <h3 class="white-text">Daily Mix 1</h3>
+              <h3 class="white-text">Avicii (Tim Berg)</h3>
             </a>
           </li>
 
@@ -246,7 +259,7 @@
                 <i class="far fa-play-circle"></i>
                 <img src="img/einaudi.jpeg" alt="Einaudi">
               </div>
-              <h3 class="white-text">Daily Mix 1</h3>
+              <h3 class="white-text">2Scratch</h3>
             </a>
           </li>
         </ul>
@@ -254,11 +267,9 @@
     </main>
 
     <footer>
-
       <!-- Colonna SX -->
       <div class="data">
         <img src="img/sinister.jpeg" alt="Sinister">
-
         <!-- Lista nome brano, album -->
         <ul class="titoli">
           <li>
@@ -309,14 +320,19 @@
           </li>
         </ul>
 
-        <div class="loading-bar">
-          <div class="minute-bar">
-            <i class="fas fa-circle"></i>
+        <!-- Barra minutaggio -->
+        <div class="">
+          <span>1:10</span>
+
+          <div class="loading-bar">
+            <div class="minute-bar">
+              <i class="fas fa-circle"></i>
+            </div>
           </div>
 
-          <p class="left-numb">1:10</p>
-          <p class="right-numb">4:20</p>
+          <span>4:20</span>
         </div>
+
       </div>
 
       <!-- Colonna DX -->
@@ -333,6 +349,7 @@
           <i class="fas fa-volume-up"></i>
         </a>
 
+        <!-- Barra volume -->
         <div class="loading-bar">
           <div class="minute-bar">
             <i class="fas fa-circle"></i>
