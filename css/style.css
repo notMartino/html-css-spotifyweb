@@ -246,10 +246,10 @@ main .navigazione{
   border-radius: 1px;
   margin: 0 auto;
   width: 40%;
-  display: none;
+  visibility: hidden;
 }
 .active .sep-orizzontale{
-  display: block;
+  visibility: visible;
 }
 
   /* Proprietà brani */

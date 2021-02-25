@@ -88,9 +88,9 @@ header #logo img:first-child{
   bottom: 80px;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 1s, height 1s;
+  transition: opacity 1s, height 1s, filter;
   padding: 20px 10px 10px 20px;
-  box-shadow: 0 0 10px 2px #282828;
+  box-shadow: 0 0 20px 0 black inset;
 }
 .btn-up:hover + .popup{
   visibility: visible;
@@ -104,4 +104,43 @@ header #logo img:first-child{
   padding-bottom: 5px;
   font-size: 13px;
   line-height: 15px;
+}
+@media all and (max-width: 767px){
+  .pop-father{
+    height: 45px;
+  }
+}
+/* Barra verde link animata */
+.navigazione li:not(.active) .sep-orizzontale{
+  position: relative;
+  left: -40%;
+  transition: left 0.5s;
+}
+.navigazione li a:hover + .sep-orizzontale{
+  visibility: visible;
+  left: 0;
+}
+
+/* Spotify verde hover */
+.nav-top #logo img:hover{
+  filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(50deg) saturate(1000%) contrast(0.8);
+}
+
+/* Barra verde link SX animata */
+header .green li, .play-name li{
+  transition: border-left-color 0.3s, padding-left 0.3s;
+}
+header .green li:hover, .play-name li:hover{
+  border-left-color: #adff2f;
+}
+header .green li:hover{
+  padding-left: 25px;
+}
+.play-name li:hover{
+  padding-left: 5px;
+}
+@media all and (max-width: 767px){
+  header .green li:hover{
+    padding-left: 15px;
+  }
 }
