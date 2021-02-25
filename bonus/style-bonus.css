@@ -62,3 +62,46 @@ header #logo img:first-child{
     width: 100%;
   }
 }
+
+/* Finestra popup specifiche brano */
+.pop-father{
+  height: 60px;
+  position: relative;
+}
+.btn-up{
+  position: absolute;
+  right: 2px;
+  top: 0;
+  display: none;
+  color: #282828;
+  z-index: 100;
+}
+.pop-father:hover .btn-up{
+  display: block
+}
+.popup{
+  width: 250px;
+  height: 0;
+  background-color: #282828;
+  position: absolute;
+  left: -20px;
+  bottom: 80px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s, height 1s;
+  padding: 20px 10px 10px 20px;
+  box-shadow: 0 0 10px 2px #282828;
+}
+.btn-up:hover + .popup{
+  visibility: visible;
+  height: 220px;
+  opacity: 1;
+  overflow: hidden;
+}
+.popup td{
+  vertical-align: top;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  font-size: 13px;
+  line-height: 15px;
+}
