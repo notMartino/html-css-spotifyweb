@@ -147,7 +147,12 @@
 
       <!-- Sezione brani recenti -->
       <section>
-        <h2>Recently played</h2>
+        <h2 id="firstTitle">Recently played</h2>
+
+        <script>
+          document.writeln('<h4>Prova sottotitolo writeLine</h4>');
+        </script>
+
         <ul class="flex-list">
           <li class="brano">
             <a href="#">
@@ -396,5 +401,16 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      document.getElementById('firstTitle').innerHTML = 'Not Recently Played!';
+
+      alert('BONUS: prova alert!');
+
+      var anni = 23;
+      var stringaAnni = 'Anni: ';
+      console.log('Ciao sono Martino');
+      console.log(stringaAnni + anni);
+    </script>
   </body>
 </html>
